@@ -1,0 +1,106 @@
+#plymouthLogo {
+    display: block;
+    width: 12.5em;
+    float: left;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    padding-right: 0.5em;
+    padding-left: 2em;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-control-prev-icon {
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.carousel-control-next-icon {
+    margin-left: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+section {
+    padding-top: 10px;
+    background-color: rgb(247, 244, 244);
+    padding-bottom: 30px;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+#formContainer {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(233, 233, 233);
+}
+
+label {
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    text-align: center;
+    margin-bottom: 15px;
+    width: 50%;
+}
+
+#addressField {
+    height: 150px;
+}
+
+#termsLink {
+    color: blue;
+    text-decoration: underline;
+}
+
+#termsLink:hover {
+    transition: 0.5s;
+    color: purple;
+}
+
+#checkbox {
+    width: fit-content;
+    margin: 15px;
+}
+
+#submit {
+    color: white;
+    background-color: rgb(56, 131, 243);
+    width: 150px;
+    margin: 15px;
+    border-radius: 7px;
+    border-color: darkblue;
+}
+
+#submit:hover {
+    background-color: darkblue;
+    transition: 0.5s;
+    border-width: 2px;
+    border-style: outset;
+    border-color: black;    
+}
