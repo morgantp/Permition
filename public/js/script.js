@@ -1,32 +1,31 @@
-const button = document.querySelector('.call');
-button.addEventListener('click', () => {
-    var checkBox = document.getElementById("checkbox");
-    if(checkBox.checked){
-        console.log("checked");
-        submitHack();
-    }
-    else{
-        console.log("unchecked");
-        alert("You must accept the Terms and Conditions in order to register");
-    } 
-});
+const newHack = document.querySelector('.new-hack form');
 
-function submitHack() {
-    const formContainer = document.querySelector('#formContainer');
+newHack.addEventListener('submit', (e) => {
+    e.preventDefault();
+
     const addHack = firebase.functions().httpsCallable('addHack');
+
     addHack({
-        name: document.getElementById("nameField").value,
-        gender: document.getElementById("genderField").value,
-        age: document.getElementById("ageField").value,
-        email: document.getElementById("emailField").value,
-        address: document.getElementById("addressField").value,
-        number: document.getElementById("phoneField").value
+        name: newHack.nameField.value,
+        gender: newHack.genderField.value,
+        age: newHack.ageField.value,
+        email: newHack.emailField.value,
+        address: newHack.addressField.value,
+        number: newHack.phoneField.value       
+
+        // name: document.getElementById("nameField").value,
+        // gender: document.getElementById("genderField").value,
+        // age: document.getElementById("ageField").value,
+        // email: document.getElementById("emailField").value,
+        // address: document.getElementById("addressField").value,
+        // number: document.getElementById("phoneField").value
     })
     .then(() => {
-        formContainer.reset();
-        alert('Submission Successful! Enjoy your visit!')
+        alert('Submission Successful! Enjoy your visit!');
+        newHack.reset();
     })
     .catch(error => {
         alert(error.message);
     }) 
-}
+
+})

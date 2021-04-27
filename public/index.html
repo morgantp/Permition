@@ -48,17 +48,17 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    <section>
+    <section class="new-hack">
       <h1>Registration</h1>
-      <div id="formContainer">
+      <form id="formContainer">
         <div class="item">
           <label>Full Name:</label><br>
-          <input type="text" id="nameField" placeholder="Enter Full Name">
+          <input type="text" name="nameField" placeholder="Enter Full Name">
         </div>
         <div class="item">
           <label>Gender:</label><br>
-          <select id="genderField">
-            <option value="null" selected>Please Select...</option>
+          <select name="genderField">
+            <option value="no" selected>Please Select...</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="other">Other</option>
@@ -66,26 +66,26 @@
         </div>
         <div class="item">
           <label>Age:</label><br>
-          <input type="number" id="ageField">
+          <input type="number" name="ageField">
         </div>
         <div class="item">
           <label>Email Address:</label><br>
-          <input type="text" id="emailField" placeholder="Enter Email Address">
+          <input type="text" name="emailField" placeholder="Enter Email Address">
         </div>
         <div class="item">
           <label>Home Address:</label><br>
-          <textarea type="text" id="addressField" placeholder="Enter Home Address"></textarea>
+          <textarea type="text" name="addressField" placeholder="Enter Home Address"></textarea>
         </div>
         <div class="item">
           <label>Phone Number:</label><br>
-          <input type="text" id="phoneField" placeholder="Enter Phone Number">
+          <input type="text" name="phoneField" placeholder="Enter Phone Number">
         </div>
         <div class="item">
           <input type="checkbox" id="checkbox">
           <label>I accept the <a id="termsLink" href="https://imgur.com/5lXi3Lc" target="_blank">Terms and Conditions</a></label>
         </div>
-        <button class="call" id="submit">Submit</button>
-      </div>
+        <button class="call">Submit</button>
+      </form>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
