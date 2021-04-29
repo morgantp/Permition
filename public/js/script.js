@@ -13,11 +13,9 @@ button.addEventListener('click', (e) => {
     } 
 });
 
-
 function submitHack() {
     const newHack = document.querySelector('.new-hack form');
     const addHack = firebase.functions().httpsCallable('addHack');
-
     
     addHack({
         name: newHack.nameField.value,
@@ -26,6 +24,7 @@ function submitHack() {
         email: newHack.emailField.value,
         address: newHack.addressField.value,
         number: newHack.phoneField.value,
+        photo: newHack.photoField.value
         
 
         // name: document.getElementById("nameField").value,

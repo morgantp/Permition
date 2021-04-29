@@ -15,10 +15,13 @@
 
 body{
     overflow-x: hidden;
+    font-family: 'Heebo', sans-serif;
 }
 
 .carousel-caption {
     background-color: rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
+    padding-top: 30px;
 }
 
 .carousel-control-prev-icon {
@@ -38,7 +41,7 @@ body{
 }
 
 section {
-    padding-top: 10px;
+    padding-top: 15px;
     background-color: rgb(247, 244, 244);
     padding-bottom: 30px;
 }
@@ -68,10 +71,23 @@ label {
     margin-bottom: 5px;
 }
 
-input, select, textarea {
-    text-align: center;
+input, select {
+    text-align-last: center;
     margin-bottom: 15px;
     width: 50%;
+    background-color: rgb(236, 236, 236);
+    border-width: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea {
+    text-align-last: center;
+    margin-bottom: 15px;
+    width: 50%;
+    background-color: rgb(236, 236, 236);
+    border-width: 1px;
+    height: 120px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #addressField {
@@ -112,6 +128,11 @@ input, select, textarea {
 
 .permition {
     display: none;
+}
+
+#testIMG {
+    width: 320px;
+    height: 240px;
 }
 
 

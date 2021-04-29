@@ -6,10 +6,12 @@ Webcam.set({
 });
 Webcam.attach( '#my_camera' );
 
-function take_snapshot() {
+function takePhoto() {
     Webcam.snap( function(data_uri) {
-        document.getElementById('results').innerHTML = '<img id="imageprev" src="'+data_uri+'"/>';
-        console.log(data_uri)
+        // console.log(data_uri);
+        $("#photoContainer").append(
+            "<input style='display: none;' type='text' name='photoField' value="+data_uri+">"
+        );
     });
     Webcam.reset();
 }

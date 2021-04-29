@@ -59,7 +59,8 @@ exports.addHack = functions.https.onCall((data, context) => {
         age,
         email,
         address,
-        number
+        number,
+        photo
     })
     .then(() => {
         return {result: "success"}
