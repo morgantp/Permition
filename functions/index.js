@@ -9,6 +9,7 @@ exports.addHack = functions.https.onCall((data, context) => {
     const email = data.email;
     const address = data.address;
     const number = data.number;
+    const photo = data.photo;
 
     if(name == "") {
         throw new functions.https.HttpsError(

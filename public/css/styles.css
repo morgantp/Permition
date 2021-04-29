@@ -8,6 +8,11 @@
     padding-left: 2em;
 }
 
+#logoContainer {
+    z-index: 10;
+    position: relative;
+}
+
 body{
     overflow-x: hidden;
 }
@@ -104,3 +109,9 @@ input, select, textarea {
     border-style: outset;
     border-color: black;    
 }
+
+.permition {
+    display: none;
+}
+
+
