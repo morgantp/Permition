@@ -10,6 +10,8 @@ exports.addHack = functions.https.onCall((data, context) => {
     const address = data.address;
     const number = data.number;
     const photo = data.photo;
+    const lat = data.lat;
+    const lng = data.lng;
 
     if(name == "") {
         throw new functions.https.HttpsError(
@@ -60,7 +62,9 @@ exports.addHack = functions.https.onCall((data, context) => {
         email,
         address,
         number,
-        photo
+        photo,
+        lat,
+        lng
     })
     .then(() => {
         return {result: "success"}

@@ -5,13 +5,41 @@ button.addEventListener('click', (e) => {
     var checkBox = document.getElementById("checkbox");
     if(checkBox.checked){
         console.log("checked");
-        submitHack();
+        // submitHack();
+        getLocation();
     }
     else{
         console.log("unchecked");
         alert("You must accept the Terms and Conditions in order to register");
     } 
 });
+
+function getLocation() {
+    const newHack = document.querySelector('.new-hack form');
+    axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
+        params: {
+            address: newHack.addressField.value,
+            key: 'AIzaSyCROu2-uxM2krjhKwIOr9s18Owgy3lTfew'
+        }
+    })
+    .then(function(response){
+        const latLocation = response.data.results[0].geometry.location.lat;
+        const lngLocation = response.data.results[0].geometry.location.lng;
+
+        $("#latContainer").append(
+            "<input style='display: none;' type='text' name='latField' value="+latLocation+">"
+        );
+
+        $("#lngContainer").append(
+            "<input style='display: none;' type='text' name='lngField' value="+lngLocation+">"
+        );
+
+        submitHack();
+    })
+    .catch(function(error){
+        console.log(error);
+    });
+}
 
 function submitHack() {
     const newHack = document.querySelector('.new-hack form');
@@ -24,7 +52,9 @@ function submitHack() {
         email: newHack.emailField.value,
         address: newHack.addressField.value,
         number: newHack.phoneField.value,
-        photo: newHack.photoField.value
+        photo: newHack.photoField.value,
+        lat: newHack.latField.value,
+        lng: newHack.lngField.value
         
 
         // name: document.getElementById("nameField").value,
